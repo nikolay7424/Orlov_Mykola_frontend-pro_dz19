@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, p {
+  margin: 0;
+}
+
+.container {
+  margin: 6rem 2rem 2rem 2rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  min-height: 50rem;
+  position: relative;
+}
+
+.block:nth-child(3) {
+  flex-grow: 3;
+}
+
+.block {
+  background: rgb(187, 187, 187);
+  border-radius: 1rem;
+  flex: 1;
+  font-size: 32px;
+  padding: 1rem;
+}
+
+.categories li {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.categories li:hover {
+  background: gray;
+  color: white;
+}
+
+.products {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.product {
+  padding: 1rem;
+  border: 2px black solid;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.product:hover {
+  background: gray;
+  color: white;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h2 {
+  font-size: 20px;
+}
+
+.product p {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.product > * {
+  pointer-events: none;
+}
+
+.cart .product > *{
+  pointer-events: all;
+}
+
+.btn {
+  border: none;
+  padding: 1rem;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 1rem;
+  background: rgb(14, 165, 14);
+  color: white;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  background: rgb(5, 105, 5);
+  transform: scale(0.98);
+}
+
+.notification {
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(12, 58, 12);
+  background: rgb(103, 154, 103);
+  display: none;
+  width: 96%;
+  position: absolute;
+  top: -5rem;
+}
